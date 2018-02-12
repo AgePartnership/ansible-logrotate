@@ -15,6 +15,7 @@ None
 
 * name - The name of the script that goes into /etc/logrotate.d/
 * path - Path to point logrotate to for the log rotation
+* paths - List of paths to point logrotate to for log rotation (Can be combined with path). Note: These paths are not quoted.
 * options - List of directives for logrotate, view the logrotate man page for specifics
 * scripts - Dict of scripts for logrotate (see Example below)
 
