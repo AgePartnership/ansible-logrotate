@@ -1,6 +1,10 @@
 # {{ ansible_managed }}
 
-"{{ item.path }}" {
+{% if item.path is defined -%}"{{ item.path }}"{%- endif %}
+{% for path in item.paths|default([]) -%}
+{{path}}
+{%- endfor %}
+{
   {% if item.options is defined -%}
   {% for option in item.options -%}
   {{ option }}
